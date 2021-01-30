@@ -31,7 +31,7 @@
 
         <div class="booking-content">
             <h1>Cruise Queen</h1>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book./p>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
         </div>
 
 
@@ -55,25 +55,27 @@
                     <input class="inp-style" type="date" name="">
                 </div>
             </div>
+
             <div class="input-group f-class">
-                <div>
+                <div class="w-100">
                     <label for="">First Class ($150)</label>
-                    <input class="inp-style inp-width" type="number" name="">
-                </div>
-                <div class="plus-minus-btn">
-                    <p>+ -</p>
+                    <button class="btn first-class-minus">-</button>
+                    <input class="first-class-ticket-amount inp-style inp-width w-100 mx-100" type="number" name="">
+                    <button class="btn first-class-plus">+</button>
                 </div>
             </div>
             
             <div class="input-group f-class">
-                <div>
+                <div class="w-100">
                     <label for="">Economy ($100)</label>
-                    <input class="inp-style inp-width" type="number" name="">
-                </div>
-                <div class="plus-minus-btn">
-                    <p> <span>+</span> <span>-</span> </p>
+                    <div class="f-class">
+                        <button class="btn economy-minus">-</button>
+                        <input class="economy-ticket-amount inp-style inp-width" type="number" name="">
+                        <button class="btn economy-plus">+</button>
+                    </div>
                 </div>
             </div>
+
             <div class="calculations">
                 <div class="amount">
                     <div class="left">
@@ -102,11 +104,65 @@
                     </div>
                 </div>
             </div>
-            <button class="btn-style">Book Now</button>
+            <button class="btn-style book-now">Book Now</button>
+        </div>
+
+        <!--Success Page-->
+        <div class="booking-details">
+            <header>
+                <h3>Your ticket has been successfully booked!</h3>
+                <p>Ticket Details</p>
+            </header>
+
+            <table class="table table-bordered">
+
+                <tbody>
+                    <tr>
+                        <td class="strong">Flying From</td>
+                        <td class="user-flying-from">d</td>
+                      </tr>
+    
+                      <tr>
+                        <td class="strong">Flying To</td>
+                        <td class="user-flying-to"></td>
+                      </tr>
+    
+                      <tr>
+                        <td class="strong">Departure</td>
+                        <td class="user-departure-date"></td>
+                      </tr>
+    
+                      <tr>
+                        <td class="strong">Return</td>
+                        <td class="user-return-date"></td>
+                      </tr>
+                      <tr>
+                        <td class="strong">First Class</td>
+                        <td class="user-first-class"></td>
+                      </tr>
+                      <tr>
+                        <td class="strong">Economy</td>
+                        <td class="user-economy-class"></td>
+                      </tr>
+                      <tr class="twopx">
+                        <td class="strong">Subtotal</td>
+                        <td> $ <span class="user-subtotal"></span></td>
+                      </tr>
+                      <tr>
+                        <td class="strong">Vat</td>
+                        <td> $ <span class="user-vat"></span></td>
+                      </tr>
+                      <tr>
+                        <td class="strong">Total</td>
+                        <td > $ <span class="user-total"></span></td>
+                      </tr>
+                </tbody>
+            </table>
         </div>
     </main>
 
     <!--Thank You-->
+    <script src="ticket.js"></script>
 </body>
 
 </html>
